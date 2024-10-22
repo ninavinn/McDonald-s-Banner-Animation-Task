@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.animation-container,
+.animation-container2,
+.animation-container3,
+.animation-container4 {
+  position: relative;
+  background-color: #04ab97;
+  width: 500px;
+  height: 1000px;
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.bg__frame1,
+.bg_frame3,
+.bg_frame4,
+.bg_frame5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.txt__headline890 {
+  position: absolute;
+  top: 12%;
+  right: 3%;
+  z-index: 10;
+  opacity: 0;
+  animation: growAndFade 1s ease-in-out forwards;
+}
+.bigbang {
+  position: absolute;
+  top: 19%;
+  right: 59%;
+  width: 41%;
+  z-index: 10;
+  animation: grow 2s ease-in-out forwards;
+}
+.price_890 {
+  position: absolute;
+  top: 37%;
+  right: 60%;
+  width: 35%;
+  z-index: 12;
+  animation: grow 2s ease-in-out forwards;
+}
+.final {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  width: 100%;
+  height: 90%;
+  z-index: 10;
+  animation: grow 1s forwards;
+}
+.stripe_red,
+.stripe_blue,
+.stripe_yellow,
+.stripe_green {
+  position: absolute;
+  width: 30%;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+}
+.stripe_red {
+  top: 24%;
+  right: -2%;
+  width: 38%;
+  height: 25%;
+  animation-delay: 0.5s;
+}
+.stripe_blue {
+  top: 24.3%;
+  right: -2%;
+  width: 41%;
+  height: 25%;
+  transform: rotate(-1deg);
+  animation-delay: 0.7s;
+}
+.stripe_yellow {
+  top: 22.2%;
+  right: -2%;
+  width: 40%;
+  height: 28%;
+  transform: rotate(-0.5deg);
+  animation-delay: 0.9s;
+}
+.stripe_green {
+  top: 22.5%;
+  right: -2.5%;
+  width: 42%;
+  height: 28%;
+  transform: rotate(1deg);
+  animation-delay: 1.1s;
+}
+.overlay_image_cheese,
+.overlay_image_chiken,
+.overlay_image_fish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 15;
+}
+.bg__frame1.show,
+.bg_frame3.show,
+.bg_frame4.show {
+  opacity: 1;
+  animation: fadeIn 0.5s forwards;
+}
+.txt__headline890.show {
+  opacity: 1;
+}
+.txt_chiken_paprika.show {
+  opacity: 1;
+}
+.stripe_red.show {
+  opacity: 1;
+}
+.stripe_blue.show {
+  opacity: 1;
+}
+.stripe_yellow.show {
+  opacity: 1;
+}
+.stripe_green.show {
+  opacity: 1;
+}
+.txt_footer_logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.button_cta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: slideInAndBlink 2s forwards;
+  animation-delay: 1s;
+}
+.hide {
+  animation: shrink 0.5s ease;
+}
+@keyframes slideInAndBlink {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes growAndFade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  0%,
+  50% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
